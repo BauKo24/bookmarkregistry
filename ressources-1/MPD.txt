@@ -1,0 +1,1 @@
+Bookmark_category(id_bookmark:INT => Regist_bookmark, id_category:INT => Category)
