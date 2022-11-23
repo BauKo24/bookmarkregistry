@@ -55,7 +55,7 @@ require_once('close.php');
 
 <body>
     <h1>✏️Modifier un bookmark✏️</h1>
-    <h2>Quelles informations souhaitez-vous modifier</h2>
+    <h2>Quelles informations souhaitez-vous modifier ?</h2>
     <div class="formulaire">
         <form method="post">
             <label class="frm-content" for="nom">Nom</label>

@@ -61,5 +61,4 @@ require_once('close.php');
         </div>
     </div>
 </body>
-
 </html>
