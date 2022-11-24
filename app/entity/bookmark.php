@@ -1,5 +1,7 @@
 <?php
 
+namespace app\entity;
+
 class Bookmark
 {
     private $id;

@@ -1,7 +1,9 @@
 <?php
 
+namespace app\manager;
+
 use PDO;
-use entity\bookmark;
+use app\entity\bookmark;
 
 class BookmarkManager
 {
