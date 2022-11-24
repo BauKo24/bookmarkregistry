@@ -50,7 +50,7 @@ require_once('close.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Edit - Bookmarks Registry (by BauKo.)</title>
     <link rel="icon" type="image/x-icon" href="css/favicon.ico">
-    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>

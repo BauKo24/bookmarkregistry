@@ -35,7 +35,7 @@ require_once('close.php');
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Add - Bookmarks Registry (by BauKo.)</title>
-    <!-- <link rel="stylesheet" href="css/styles.css"> -->
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/x-icon" href="css/favicon.ico">
 
 </head>
