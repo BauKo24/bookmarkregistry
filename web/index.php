@@ -3,13 +3,7 @@
 
 require_once('connect.php');
 
-$sql = 'SELECT * FROM `regist_bookmark`';
-
-$query = $db->con->prepare($sql);
-
-$query->execute();
-
-$result = $query->fetchAll(PDO::FETCH_ASSOC);
+    $result = $db->bookmarks->getBookmarks();
 
 require_once('close.php');
 ?>

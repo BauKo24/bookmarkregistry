@@ -1,5 +1,3 @@
-// models/categories.php
-
 <?php
 
 class Categories
