@@ -11,15 +11,8 @@ if (isset($_POST)) {
         $adresse = strip_tags($_POST['adresse']);
         $idu = strip_tags($_POST['idu']);
 
-        $sql = "INSERT INTO `regist_bookmark` (`name`, `url`, `id_user`) VALUES (:name, :url, :id_user);";
+        $db->bookmarks->createBookmark($nom, $adresse, $idu);
 
-        $query = $db->con->prepare($sql);
-
-        $query->bindValue(':name', $nom, PDO::PARAM_STR);
-        $query->bindValue(':url', $adresse, PDO::PARAM_STR);
-        $query->bindValue(':id_user', $idu, PDO::PARAM_INT);
-
-        $query->execute();
         $_SESSION['message'] = "Bookmark ajouté avec succès !";
         header('Location: index.php');
     }

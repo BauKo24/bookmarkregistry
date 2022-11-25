@@ -13,16 +13,7 @@ if (isset($_POST)) {
         $adresse = strip_tags($_POST['adresse']);
         $idu = strip_tags($_POST['idu']);
 
-        $sql = "UPDATE `regist_bookmark` SET `name`=:name, `url`=:url, `id_user`=:id_user WHERE `id`=:id;";
-
-        $query = $db->con->prepare($sql);
-
-        $query->bindValue(':name', $nom, PDO::PARAM_STR);
-        $query->bindValue(':url', $adresse, PDO::PARAM_STR);
-        $query->bindValue(':id_user', $idu, PDO::PARAM_INT);
-        $query->bindValue(':id', $id, PDO::PARAM_INT);
-
-        $query->execute();
+        $db->bookmarks->editBookmarkById($id, $nom, $adresse, $idu);
 
         header('Location: index.php');
     }
@@ -30,14 +21,8 @@ if (isset($_POST)) {
 
 if (isset($_GET['id']) && !empty($_GET['id'])) {
     $id = strip_tags($_GET['id']);
-    $sql = "SELECT * FROM `regist_bookmark` WHERE `id`=:id;";
-
-    $query = $db->con->prepare($sql);
-
-    $query->bindValue(':id', $id, PDO::PARAM_INT);
-    $query->execute();
-
-    $result = $query->fetch();
+    
+    $db->bookmarks->getBookmarkById($id);
 }
 
 require_once('close.php');
