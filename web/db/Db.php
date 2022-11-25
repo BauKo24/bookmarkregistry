@@ -1,4 +1,9 @@
+// db/Db.php
 <?php
+
+require_once(__DIR__ . '/../models/bookmarks.php');
+require_once(__DIR__ . '/../models/categories.php');
+require_once(__DIR__ . '/../models/users.php');
 
 class Db
 {
@@ -11,6 +16,8 @@ class Db
 
     //model definitions
     public $bookmarks;
+    public $categories;
+    public $users;
 
     public function __construct($host, $dbName, $username, $password)
     {
@@ -20,6 +27,9 @@ class Db
         $this->password = $password;
 
         $this->connect();
+
+        //model loaders
+        $this->loadModels();
     }
 
     private function connect()
@@ -30,5 +40,12 @@ class Db
             print "Erreur !: " . $e->getMessage() . "<br/>";
             die();
         }
+    }
+
+    private function loadModels()
+    {
+        $this->bookmarks = new Bookmarks($this->con);
+        $this->categories = new Categories($this->con);
+        $this->users = new Users($this->con);
     }
 }
