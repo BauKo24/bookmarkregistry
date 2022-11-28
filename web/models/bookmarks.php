@@ -19,7 +19,6 @@ class Bookmarks
         $query->execute();
     }
 
-    
     public function getBookmarks()
     {
         // J'écris la requête
