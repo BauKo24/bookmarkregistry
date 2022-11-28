@@ -43,7 +43,7 @@ class Bookmarks
         $query->bindValue(':id', $id, PDO::PARAM_INT);
         $query->execute();
 
-        $result = $query->fetch();
+        return $query->fetch();
     }
 
     

@@ -22,7 +22,7 @@ if (isset($_POST)) {
 if (isset($_GET['id']) && !empty($_GET['id'])) {
     $id = strip_tags($_GET['id']);
     
-    $db->bookmarks->getBookmarkById($id);
+    $result = $db->bookmarks->getBookmarkById($id);
 }
 
 require_once('close.php');
