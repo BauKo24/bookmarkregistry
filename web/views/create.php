@@ -24,7 +24,7 @@
             <button class="frm-content btn-form">Enregistrer</button>
         </form>
     </div>
-    <a class="back-btn" href="home.php">
+    <a class="back-btn" href="../web/index.php">
         << Retour</a>
 </body>
 

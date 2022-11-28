@@ -24,7 +24,7 @@
             <input type="hidden" name="id" value="<?= $result['id'] ?>">
         </form>
     </div>
-    <a class="back-btn" href="index.php">
+    <a class="back-btn" href="../web/index.php">
         << Retour</a>
 </body>
 

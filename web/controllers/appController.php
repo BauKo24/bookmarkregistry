@@ -54,6 +54,8 @@ class AppController
                 header('Location: index.php');
             }
         }
+
+        $this->render('create', []);
     }
 
     public function update()
@@ -70,17 +72,18 @@ class AppController
                 $adresse = strip_tags($_POST['adresse']);
                 $idu = strip_tags($_POST['idu']);
         
-                $result = $this->db->bookmarks->editBookmarkById($id, $nom, $adresse, $idu);
+                $this->db->bookmarks->editBookmarkById($id, $nom, $adresse, $idu);
         
                 header('Location: index.php');
             }
         }
         
-        if (isset($_GET['id']) && !empty($_GET['id'])) {
-            $id = strip_tags($_GET['id']);
-            
-            $this->db->bookmarks->getBookmarkById($id);
-        }
+        $id = strip_tags($_GET['id']);
+        $result = $this->db->bookmarks->getBookmarkById($id);
+
+        $this->render('update', [
+            'result'=> $result
+        ]);
     }
 
 }
