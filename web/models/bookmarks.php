@@ -31,7 +31,7 @@ class Bookmarks
         $query->execute();
 
         // Je stocke le résultat dans un tableau assiociatif
-        return $query->fetchAll(PDO::FETCH_ASSOC);
+        return  $query->fetchAll(PDO::FETCH_ASSOC);
     }
     
     public function getBookmarkById($id)
