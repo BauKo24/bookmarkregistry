@@ -1,0 +1,15 @@
+{
+    "name": "bauko/web",
+    "autoload": {
+        "psr-4": {
+            "Bauko\\Web\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ethan LERIGAB",
+            "email": "ethanlerigab@gmail.com"
+        }
+    ],
+    "require": {}
+}

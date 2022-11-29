@@ -1,8 +1,8 @@
 <?php
 
-require_once(__DIR__ . '/../models/bookmarks.php');
-require_once(__DIR__ . '/../models/categories.php');
-require_once(__DIR__ . '/../models/users.php');
+namespace Bauko\Web\db;
+
+use Bauko\Web\models\Bookmarks;
 
 class Db
 {
@@ -34,8 +34,8 @@ class Db
     private function connect()
     {
         try {
-            $this->con = new PDO('mysql:host=' . $this->host . ';dbname=' . $this->dbName, $this->username, $this->password);
-        } catch (PDOException $e) {
+            $this->con = new \PDO('mysql:host=' . $this->host . ';dbname=' . $this->dbName, $this->username, $this->password);
+        } catch (\PDOException $e) {
             print "Erreur !: " . $e->getMessage() . "<br/>";
             die();
         }
@@ -44,7 +44,5 @@ class Db
     private function loadModels()
     {
         $this->bookmarks = new Bookmarks($this->con);
-        $this->categories = new Categories($this->con);
-        $this->users = new Users($this->con);
     }
 }

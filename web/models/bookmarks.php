@@ -1,5 +1,6 @@
 <?php
 
+namespace Bauko\Web\models;
 class Bookmarks
 {
     private $db;
@@ -15,7 +16,7 @@ class Bookmarks
 
         $query = $this->db->prepare($sql);
 
-        $query->bindValue(':id', $id, PDO::PARAM_INT);
+        $query->bindValue(':id', $id, \PDO::PARAM_INT);
         $query->execute();
     }
 
@@ -31,7 +32,7 @@ class Bookmarks
         $query->execute();
 
         // Je stocke le résultat dans un tableau assiociatif
-        return  $query->fetchAll(PDO::FETCH_ASSOC);
+        return  $query->fetchAll(\PDO::FETCH_ASSOC);
     }
     
     public function getBookmarkById($id)
@@ -40,7 +41,7 @@ class Bookmarks
 
         $query = $this->db->prepare($sql);
 
-        $query->bindValue(':id', $id, PDO::PARAM_INT);
+        $query->bindValue(':id', $id, \PDO::PARAM_INT);
         $query->execute();
 
         return $query->fetch();
@@ -54,10 +55,10 @@ class Bookmarks
 
         $query = $this->db->prepare($sql);
 
-        $query->bindValue(':name', $nom, PDO::PARAM_STR);
-        $query->bindValue(':url', $adresse, PDO::PARAM_STR);
-        $query->bindValue(':id_user', $idu, PDO::PARAM_INT);
-        $query->bindValue(':id', $id, PDO::PARAM_INT);
+        $query->bindValue(':name', $nom, \PDO::PARAM_STR);
+        $query->bindValue(':url', $adresse, \PDO::PARAM_STR);
+        $query->bindValue(':id_user', $idu, \PDO::PARAM_INT);
+        $query->bindValue(':id', $id, \PDO::PARAM_INT);
 
         $query->execute();
     }
@@ -68,9 +69,9 @@ class Bookmarks
 
         $query = $this->db->prepare($sql);
 
-        $query->bindValue(':name', $nom, PDO::PARAM_STR);
-        $query->bindValue(':url', $adresse, PDO::PARAM_STR);
-        $query->bindValue(':id_user', $idu, PDO::PARAM_INT);
+        $query->bindValue(':name', $nom, \PDO::PARAM_STR);
+        $query->bindValue(':url', $adresse, \PDO::PARAM_STR);
+        $query->bindValue(':id_user', $idu, \PDO::PARAM_INT);
 
         $query->execute();
     }
