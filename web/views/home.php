@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>Bookmarks Registry (by BauKo.)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/x-icon" href="css/favicon.ico">
+    <link rel="stylesheet" href="views/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="views/css/favicon.ico">
     <script src="https://kit.fontawesome.com/c6f17a239d.js" crossorigin="anonymous"></script>
 
 </head>
