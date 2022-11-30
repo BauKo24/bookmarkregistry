@@ -33,7 +33,7 @@ class AppController
 
             $id = strip_tags($_GET['id']);
             $this->db->bookmarks->deleteBookmark($id);
-            header('Location: index.php');
+            header('Location: /');
         }
 
     }
@@ -53,7 +53,7 @@ class AppController
                 $this->db->bookmarks->createBookmark($nom, $adresse, $idu);
         
                 $_SESSION['message'] = "Bookmark ajouté avec succès !";
-                header('Location: index.php');
+                header('Location: /');
             }
         }
 
@@ -76,7 +76,7 @@ class AppController
         
                 $this->db->bookmarks->editBookmarkById($id, $nom, $adresse, $idu);
         
-                header('Location: index.php');
+                header('Location: /');
             }
         }
         
