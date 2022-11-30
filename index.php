@@ -10,6 +10,10 @@ $router->map( 'GET', '/', function() use ($controller) {
 	$controller->index();
 });
 
+$router->map('GET', '/delete/[i:id]', function ($id) use ($controller) {
+    $controller->delete($id);
+});
+
 // match current request url
 $match = $router->match();
 

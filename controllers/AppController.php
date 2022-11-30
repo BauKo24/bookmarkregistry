@@ -26,16 +26,10 @@ class AppController
         $this->render('home', ['result' => $result]);
     }
 
-    public function delete()
+    public function delete($id)
     {
-        if(isset($_GET['id']) && !empty($_GET['id']))
-        {
-
-            $id = strip_tags($_GET['id']);
-            $this->db->bookmarks->deleteBookmark($id);
-            header('Location: /');
-        }
-
+        $this->db->bookmarks->deleteBookmark($id);
+        header('Location: /');
     }
 
     public function create()
@@ -49,9 +43,9 @@ class AppController
                 $nom = strip_tags($_POST['nom']);
                 $adresse = strip_tags($_POST['adresse']);
                 $idu = strip_tags($_POST['idu']);
-        
+
                 $this->db->bookmarks->createBookmark($nom, $adresse, $idu);
-        
+
                 $_SESSION['message'] = "Bookmark ajouté avec succès !";
                 header('Location: /');
             }
@@ -73,19 +67,18 @@ class AppController
                 $nom = strip_tags($_POST['nom']);
                 $adresse = strip_tags($_POST['adresse']);
                 $idu = strip_tags($_POST['idu']);
-        
+
                 $this->db->bookmarks->editBookmarkById($id, $nom, $adresse, $idu);
-        
+
                 header('Location: /');
             }
         }
-        
+
         $id = strip_tags($_GET['id']);
         $result = $this->db->bookmarks->getBookmarkById($id);
 
         $this->render('update', [
-            'result'=> $result
+            'result' => $result
         ]);
     }
-
 }

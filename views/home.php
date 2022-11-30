@@ -34,7 +34,7 @@
                         <td><?= $info['name'] ?></td>
                         <td><a class="bkm-link" target="_blank" href="<?= $info['url'] ?>"><?= $info['url'] ?></a></td>
                         <td><?= $info['id_user'] ?></td>
-                        <td><a class="edit" href="edit.php?id=<?= $info['id'] ?>"><i class="fa-solid fa-pencil"></i> Modifier</a> <a class="del" href="delete.php?id=<?= $info['id'] ?>"><i class="fa-solid fa-trash-can"></i> Supprimer</a></td>
+                        <td><a class="edit" href="edit.php?id=<?= $info['id'] ?>"><i class="fa-solid fa-pencil"></i> Modifier</a> <a class="del" href="delete/<?= $info['id'] ?>"><i class="fa-solid fa-trash-can"></i> Supprimer</a></td>
                     </tr>
                 <?php
                 }
