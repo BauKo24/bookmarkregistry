@@ -1,8 +1,6 @@
 <?php
 require_once('connect.php');
 
-// $controller->index();
-
 $router = new AltoRouter();
 
 // map homepage
@@ -18,8 +16,8 @@ $router->map('GET', '/update/[i:id]', function ($id) use ($controller) {
     $controller->read_update($id);
 });
 
-$router->map('POST', '/update/[i:id]', function ($id) use ($controller) {
-    $controller->update($id);
+$router->map('POST', '/updatetable', function () use ($controller) {
+    $controller->update();
 });
 
 // match current request url

@@ -49,7 +49,7 @@ class Bookmarks
 
     
 
-    public function editBookmarkById($id, $nom, $adresse, $idu)
+    public function editBookmarkById($nom, $adresse, $idu,$id)
     {
         $sql = "UPDATE `regist_bookmark` SET `name`=:name, `url`=:url, `id_user`=:id_user WHERE `id`=:id;";
 
@@ -59,7 +59,7 @@ class Bookmarks
         $query->bindValue(':url', $adresse, \PDO::PARAM_STR);
         $query->bindValue(':id_user', $idu, \PDO::PARAM_INT);
         $query->bindValue(':id', $id, \PDO::PARAM_INT);
-
+        
         $query->execute();
     }
 

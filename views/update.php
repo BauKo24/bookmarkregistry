@@ -13,7 +13,7 @@
     <h1>✏️Modifier un bookmark✏️</h1>
     <h2>Quelles informations souhaitez-vous modifier ?</h2>
     <div class="formulaire">
-        <form method="post">
+        <form action="/updatetable" method="POST">
             <label class="frm-content" for="nom">Nom</label>
             <input class="frm-content input-form" type="text" name="nom" id="name" value="<?= $result['name'] ?>"><br>
             <label class="frm-content" for="prix">Adresse</label>

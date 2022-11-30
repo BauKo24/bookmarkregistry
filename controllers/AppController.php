@@ -60,31 +60,31 @@ class AppController
         $this->render('create', []);
     }
 
-    public function update($id)
-    {
+    public function update()
+    {   
         if (isset($_POST)) {
             if (
-                isset($_POST['id']) && !empty($_POST['id'])
-                && isset($_POST['nom']) && !empty($_POST['nom'])
+                isset($_POST['nom']) && !empty($_POST['nom'])
                 && isset($_POST['adresse']) && !empty($_POST['adresse'])
                 && isset($_POST['idu']) && !empty($_POST['idu'])
+                && isset($_POST['id']) && !empty($_POST['id'])
             ) {
-                $id = strip_tags($_GET['id']);
                 $nom = strip_tags($_POST['nom']);
                 $adresse = strip_tags($_POST['adresse']);
                 $idu = strip_tags($_POST['idu']);
+                $id = strip_tags($_POST['id']);
 
-                $this->db->bookmarks->editBookmarkById($id, $nom, $adresse, $idu);
+                $this->db->bookmarks->editBookmarkById($nom, $adresse, $idu,$id);
 
                 header('Location: /');
             }
         }
 
-        $id = strip_tags($_GET['id']);
-        $result = $this->db->bookmarks->getBookmarkById($id);
+        // $id = strip_tags($_GET['id']);
+        // $result = $this->db->bookmarks->getBookmarkById($id);
 
-        $this->render('update', [
-            'result' => $result
-        ]);
+        // $this->render('update', [
+        //     'result' => $result
+        // ]);
     }
 }
