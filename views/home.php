@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <title>Bookmarks Registry (by BauKo.)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="views/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="views/css/favicon.ico">
+    <link rel="stylesheet" href="../views/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../views/css/favicon.ico">
     <script src="https://kit.fontawesome.com/c6f17a239d.js" crossorigin="anonymous"></script>
 
 </head>
@@ -34,7 +34,7 @@
                         <td><?= $info['name'] ?></td>
                         <td><a class="bkm-link" target="_blank" href="<?= $info['url'] ?>"><?= $info['url'] ?></a></td>
                         <td><?= $info['id_user'] ?></td>
-                        <td><a class="edit" href="edit.php?id=<?= $info['id'] ?>"><i class="fa-solid fa-pencil"></i> Modifier</a> <a class="del" href="delete/<?= $info['id'] ?>"><i class="fa-solid fa-trash-can"></i> Supprimer</a></td>
+                        <td><a class="edit" href="update/<?= $info['id'] ?>"><i class="fa-solid fa-pencil"></i> Modifier</a> <a class="del" href="delete/<?= $info['id'] ?>"><i class="fa-solid fa-trash-can"></i> Supprimer</a></td>
                     </tr>
                 <?php
                 }

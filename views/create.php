@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Add - Bookmarks Registry (by BauKo.)</title>
-    <link rel="stylesheet" href="views/css/styles.css">
-    <link rel="icon" type="image/x-icon" href="views/css/favicon.ico">
+    <link rel="stylesheet" href="../views/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="../views/css/favicon.ico">
 
 </head>
 

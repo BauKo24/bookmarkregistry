@@ -14,6 +14,14 @@ $router->map('GET', '/delete/[i:id]', function ($id) use ($controller) {
     $controller->delete($id);
 });
 
+$router->map('GET', '/update/[i:id]', function ($id) use ($controller) {
+    $controller->read_update($id);
+});
+
+$router->map('POST', '/update/[i:id]', function ($id) use ($controller) {
+    $controller->update($id);
+});
+
 // match current request url
 $match = $router->match();
 

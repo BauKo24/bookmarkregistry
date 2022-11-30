@@ -26,6 +26,12 @@ class AppController
         $this->render('home', ['result' => $result]);
     }
 
+    public function read_update($id)
+    {
+        $result = $this->db->bookmarks->getBookmarkById($id);
+        $this->render('update', ['result' => $result]);
+    }
+    
     public function delete($id)
     {
         $this->db->bookmarks->deleteBookmark($id);
@@ -54,7 +60,7 @@ class AppController
         $this->render('create', []);
     }
 
-    public function update()
+    public function update($id)
     {
         if (isset($_POST)) {
             if (
