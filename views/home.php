@@ -42,7 +42,7 @@
             </tbody>
         </table>
         <div>
-            <a class="add" href="add.php"><i class="fa-solid fa-square-plus"></i> Ajouter</a>
+            <a class="add" href="/create"><i class="fa-solid fa-square-plus"></i> Ajouter</a>
         </div>
     </div>
 </body>

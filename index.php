@@ -20,6 +20,10 @@ $router->map('POST', '/updatetable', function () use ($controller) {
     $controller->update();
 });
 
+$router->map('GET|POST', '/create', function () use ($controller) {
+    $controller->create();
+});
+
 // match current request url
 $match = $router->match();
 

@@ -80,11 +80,5 @@ class AppController
             }
         }
 
-        // $id = strip_tags($_GET['id']);
-        // $result = $this->db->bookmarks->getBookmarkById($id);
-
-        // $this->render('update', [
-        //     'result' => $result
-        // ]);
     }
 }

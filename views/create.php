@@ -14,7 +14,7 @@
     <h1>📜Ajouter un signet au registre📜</h1>
     <h2>Renseignez les informations du nouveau signet</h2>
     <div class="formulaire">
-        <form method="post">
+        <form action="/create" method="POST">
             <label class="frm-content" for="nom">Nom</label>
             <input class="frm-content input-form" type="text" name="nom" id="name"><br>
             <label class="frm-content" for="url">Adresse</label>
