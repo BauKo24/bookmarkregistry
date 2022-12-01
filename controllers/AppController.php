@@ -2,8 +2,6 @@
 
 namespace Bauko\Web\controllers;
 
-require_once('connect.php');
-
 class AppController
 {
 
