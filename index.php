@@ -4,7 +4,7 @@ require 'vendor/autoload.php';
 use Bauko\Web\controllers\AppController;
 use Bauko\Web\db\Db;
 
-$db = new Db('db', 'campus', 'docker', 'docker');
+$db = new Db(getenv('MYSQL_HOST'), getenv('MYSQL_DB'), getenv('MYSQL_USER'), getenv('MYSQL_PASSWORD'));
 $controller = new AppController($db);
 
 $router = new AltoRouter();
